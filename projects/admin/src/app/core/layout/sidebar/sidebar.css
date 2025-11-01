@@ -1,0 +1,126 @@
+:host {
+  padding: 20px 0px 60px 15px;
+  height: calc(100vh - 75px);
+  overflow-y: auto;
+  transition: 0.6s;
+  flex-shrink: 0;
+  background-color: #fafafa;
+}
+
+@media (width <= 768px) {
+  :host {
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+    transform: translateX(-110%);
+    padding: 20px 15px 60px 15px;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+.close-icon {
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.sidebar_open :host {
+  transform: translateX(0%);
+}
+
+.user .image {
+  border-radius: 50%;
+  width: 78px;
+  height: 78px;
+  overflow: hidden;
+  border: 1px solid #dbdbdb;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.user .image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.user h6 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: auto;
+  margin-top: 6px;
+  font-weight: 500;
+  width: fit-content;
+}
+ul {
+  margin-top: 20px;
+}
+
+ul li .item,
+li .sub_item {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0px 20px;
+  margin: 5px 0px 0 0;
+  color: #5f5f5f;
+  line-height: 18px;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+/* li .sub_item {
+  display: none;
+}
+li .sub_item.show_sub {
+  display: flex;
+} */
+
+.submenu_wrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+}
+
+.submenu_wrapper.show_sub {
+  max-height: 500px;
+  opacity: 1;
+}
+li .icon {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li .icon img {
+  width: 25px;
+  height: 25px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text > div:first-child {
+  font-size: 16px;
+  font-weight: 400;
+}
+.text > div:last-child {
+  font-weight: 300;
+  font-size: 14px;
+}

@@ -1,0 +1,18 @@
+<div class="search">
+  <input type="text" placeholder="Recherche fournisseur" />
+  <div class="icon">
+    <mat-icon class="search-icon" fontIcon="search"></mat-icon>
+  </div>
+</div>
+
+<div class="actions">
+  <div (click)="showUserForm()" class="add_user">
+    <mat-icon class="icon" fontIcon="person_add"></mat-icon>
+    Ajoute un fournisseur
+  </div>
+  <div class="user_number">
+    <mat-icon class="icon" fontIcon="person"></mat-icon>
+    fournisseurs
+  </div>
+</div>
+<user-form (closeForm)="hideUserForm()" *ngIf="isUserFormVisible"></user-form>

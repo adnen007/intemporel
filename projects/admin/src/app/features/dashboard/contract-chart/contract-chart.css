@@ -1,0 +1,8 @@
+#chart2 {
+  background: #ffffff;
+  box-shadow: 0 1px 7px rgb(0 0 0 / 7%);
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  line-height: 1.5;
+  width: 100%;
+}

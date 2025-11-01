@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/app",
+    "types": [],
+    "strict": false, // disables all strict checks
+    "noImplicitAny": false, // allow implicit 'any'
+    "strictNullChecks": false,
+    "skipLibCheck": true // ignores library type errors
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.spec.ts"]
+}

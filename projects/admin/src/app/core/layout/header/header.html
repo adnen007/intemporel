@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="sidebar" (click)="openSidebar()">
+    <span class="material-symbols-outlined"> left_panel_open </span>
+  </div>
+  <div class="logo">
+    <img src="images/logo.png" alt="" />
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Recherche Rapide..." />
+    <mat-icon class="search-icon" fontIcon="search"></mat-icon>
+  </div>
+  <div class="user">
+    <div class="info" (click)="switchProfileSetting()">
+      <h6 class="name">adnen soltani</h6>
+      <p class="role">admin panel</p>
+    </div>
+    <div (click)="switchProfileSetting()" class="image">
+      <div class="image-container">
+        <img src="images/user.jpg" alt="" />
+      </div>
+      <div *ngIf="showProfileSetting" class="profile_setting">
+        <ul>
+          <li>
+            <div class="icon-container">
+              <mat-icon class="icon" fontIcon="newspaper"></mat-icon>
+            </div>
+            <div class="description">
+              <h6>Aller vers le site</h6>
+              <span>Modify your personal detail</span>
+            </div>
+          </li>
+          <li>
+            <div class="icon-container">
+              <mat-icon class="icon" fontIcon="assignment_ind"></mat-icon>
+            </div>
+            <div class="description">
+              <h6>Mon Profile</h6>
+              <span>View personal profile details</span>
+            </div>
+          </li>
+          <li>
+            <div class="icon-container">
+              <mat-icon class="icon" fontIcon="engineering"></mat-icon>
+            </div>
+            <div class="description">
+              <h6>Account setting</h6>
+              <span>Manage your account parameters</span>
+            </div>
+          </li>
+          <li>
+            <div class="icon-container">
+              <mat-icon class="icon" fontIcon="lock"></mat-icon>
+            </div>
+            <div class="description">
+              <h6>Privacy Setting</h6>
+              <span>Control your Privacy parameters</span>
+            </div>
+          </li>
+          <li>
+            <div class="sign_out">
+              Sign out <mat-icon class="icon" fontIcon="exit_to_app"></mat-icon>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="notifications">
+      <div class="inbox">
+        <mat-icon class="icon" fontIcon="mark_email_unread"></mat-icon>
+      </div>
+      <div class="notification">
+        <mat-icon class="icon" fontIcon="notifications_active"></mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

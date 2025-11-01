@@ -1,0 +1,55 @@
+:host {
+  flex: 1;
+  padding: 20px 60px;
+  background-color: #fafafa;
+}
+
+.navs,
+.order-stats,
+.contract-stats {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+  justify-content: space-between;
+  margin: auto;
+}
+
+@media (width >= 576px) {
+  .navs,
+  .order-stats,
+  .contract-stats {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+@media (width >= 1200px) {
+  .navs,
+  .order-stats,
+  .contract-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.navs {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.order-stats,
+.contract-stats {
+  margin-top: 30px;
+  grid-template-columns: 1fr;
+}
+.order-stats .order,
+.contract-stats .contract {
+  display: none;
+}
+@media (width >= 1200px) {
+  .order-stats,
+  .contract-stats {
+    grid-template-columns: 3fr calc((100% - 90px) / 4);
+  }
+  .order-stats .order,
+  .contract-stats .contract {
+    display: block;
+  }
+}

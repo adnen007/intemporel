@@ -1,0 +1,151 @@
+:root {
+  --iq-bg-dark-bg: #6d73f6;
+  --iq-bg-light-color: #efeefd;
+  --iq-bg-dark-color: #1d203f;
+  --iq-primary: #de7591;
+  /* --iq-primary: #827af3; */
+  --iq-primary-light: #41acf7;
+  --iq-primary-dark: #6675fd;
+  --iq-secondary: #a09e9e;
+  --iq-secondary-light: #c1c1c1;
+  --iq-secondary-dark: #7d7d7d;
+  --iq-success: #27b345;
+  --iq-success-light: #45ce62;
+  --iq-success-dark: #3dbb58;
+  --iq-warning: #ffd369;
+  --iq-warning-light: #ffd369;
+  --iq-warning-dark: #fbc647;
+  --iq-danger: #f14336;
+  --iq-danger-light: #fd6256;
+  --iq-danger-dark: #f35448;
+  --iq-info: #6ce6f4;
+  --iq-info-light: #6ce6f4;
+  --iq-info-dark: #67ddea;
+  --iq-dark: #3f414d;
+  --iq-light: #e9edf4;
+  --iq-white: #ffffff;
+  --iq-black: #000000;
+  --iq-cyan: #0cd2e3;
+  --iq-cobalt-blue: #3f79f1;
+  --iq-spring-green: #1be1b3;
+  --iq-amber: #f4b72a;
+  --iq-pink: #fd6c9e;
+}
+
+/*
+============
+Global Style
+=============
+ */
+
+/*---------------------------------------------------------------------
+General
+-----------------------------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: 'League Spartan', 'Cairo', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--iq-secondary);
+  background: #fafafa;
+}
+
+a {
+  color: var(--iq-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'League Spartan', 'Cairo', sans-serif;
+  font-weight: 400;
+  margin: 0px;
+  line-height: 1.5;
+  color: var(--iq-dark);
+}
+
+h1 {
+  font-size: 3.052em;
+}
+h2 {
+  font-size: 2.3em;
+}
+h3 {
+  font-size: 1.953em;
+}
+h4 {
+  font-size: 1.4em;
+}
+h5 {
+  font-size: 1.2em;
+}
+h6 {
+  font-size: 1em;
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* @media (width >= 576px) {
+  .container {
+    width: 540px;
+  }
+}
+@media (width >= 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (width >= 992px) {
+  .container {
+    width: 960px;
+  }
+} */
+@media (width >= 1200px) {
+  .container {
+    width: 1190px;
+  }
+}
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--iq-primary);
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(130, 122, 243, 0.8);
+}
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--iq-primary) transparent;
+}

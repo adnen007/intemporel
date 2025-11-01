@@ -1,0 +1,21 @@
+<div class="navs">
+  <dashboard-nav *ngFor="let nav of navs" [nav]="nav"></dashboard-nav>
+</div>
+
+<div class="order-stats">
+  <div class="chart">
+    <app-chart></app-chart>
+  </div>
+  <div class="order">
+    <add-order></add-order>
+  </div>
+</div>
+
+<div class="contract-stats">
+  <div class="chart">
+    <app-contract-chart></app-contract-chart>
+  </div>
+  <div class="contract">
+    <add-contract></add-contract>
+  </div>
+</div>

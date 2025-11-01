@@ -1,0 +1,34 @@
+<div class="image">
+  <img src="images/user.jpg" alt="" />
+  <h6 class="name">Client Intemporel</h6>
+</div>
+<div class="info">
+  <div class="top">
+    <h6 class="name">Client Intemporel</h6>
+    <div [ngClass]="{ show_more: showMore }" class="action">
+      <div (click)="switchActive()" [ngClass]="{ on: isActive }" class="active">Actif</div>
+      <div (click)="switchSale()" [ngClass]="{ on: isSale }" class="sale">Vente</div>
+      <div class="date">Ajoute Samedi 1er mai 2021</div>
+      <div (click)="showUserForm()" class="edit">Modifier</div>
+      <user-form (closeForm)="hideUserForm()" *ngIf="isUserFormVisible"></user-form>
+      <div class="delete">supprimer</div>
+    </div>
+    <div (click)="switchShowMore()" class="more-icon">
+      <mat-icon class="search-icon" fontIcon="more_vert"></mat-icon>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="email">
+      <h5>Email</h5>
+      <p>Client@Client.com</p>
+    </div>
+    <div class="phone">
+      <h5>Telephone</h5>
+      <p>300008899</p>
+    </div>
+    <div class="address">
+      <h5>Adresse</h5>
+      <p>sousse</p>
+    </div>
+  </div>
+</div>

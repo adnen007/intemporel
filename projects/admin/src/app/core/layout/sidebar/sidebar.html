@@ -1,0 +1,41 @@
+<div class="close" (click)="closeSidebar()">
+  <mat-icon class="close-icon" fontIcon="close"></mat-icon>
+</div>
+
+<div class="user">
+  <div class="image">
+    <img src="images/user.jpg" alt="" />
+  </div>
+  <h6 class="name">Intemporel Dashboard</h6>
+</div>
+
+<ul>
+  <li *ngFor="let item of menuItems; let i = index">
+    <div
+      class="item"
+      [routerLink]="item.link"
+      [class.has-link]="item.link"
+      (click)="item.submenu ? toggleSubmenu(i) : closeSidebar()"
+    >
+      <div class="icon">
+        <img [src]="item.icon" alt="" />
+      </div>
+      <div class="text">
+        <div>{{ item.title }}</div>
+        <div>{{ item.subtitle }}</div>
+      </div>
+    </div>
+
+    <!-- Submenu -->
+    <div class="submenu_wrapper" [ngClass]="{ show_sub: item.expanded }">
+      <div
+        (click)="closeSidebar()"
+        class="sub_item"
+        *ngFor="let sub of item.submenu"
+        [routerLink]="sub.link"
+      >
+        {{ sub.label }}
+      </div>
+    </div>
+  </li>
+</ul>

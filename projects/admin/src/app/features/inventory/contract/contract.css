@@ -1,0 +1,145 @@
+:host {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+  width: 100%;
+
+  background: #ffffff;
+  box-shadow: 0 1px 7px rgb(0 0 0 / 7%);
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  padding: 15px 16px;
+  line-height: 1.5;
+}
+
+@media (width <= 1200px) {
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+.image img {
+  display: block;
+}
+.image .name {
+  margin-top: 10px;
+}
+@media (width > 1200px) {
+  .image .name {
+    display: none;
+  }
+}
+.info {
+  width: 100%;
+}
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+@media (width <= 1200px) {
+  .info .name {
+    display: none;
+  }
+}
+
+.top,
+.bottom {
+  display: flex;
+}
+
+.top {
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+@media (width <= 1200px) {
+  .top {
+    justify-content: end;
+    height: 0px;
+  }
+}
+
+.bottom {
+  padding-top: 12px;
+  border-top: 1px solid #ececec;
+}
+@media (width <= 1200px) {
+  .bottom {
+    flex-wrap: wrap;
+    border-left: 1px solid #ececec;
+    border-top: none;
+    padding-left: 12px;
+  }
+}
+
+.action {
+  display: flex;
+  gap: 10px;
+}
+@media (width<= 1200px) {
+  .action {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 250px;
+    top: 25px;
+    right: 10px;
+    background-color: rgb(250 250 250);
+    padding: 12px;
+    box-shadow: 0 1px 7px rgb(0 0 0 / 7%);
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+  }
+  .action.show_more {
+    display: flex;
+  }
+}
+
+.action .delete,
+.action .edit,
+.action .print {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  border-radius: 30px;
+  font-size: 13px;
+  padding: 15px 15px 12px 12px;
+  color: rgb(57, 55, 56);
+}
+
+.action .delete,
+.action .edit {
+  background: rgb(253, 236, 239);
+  user-select: none;
+  cursor: pointer;
+}
+.action .print {
+  background-color: #d2c2f2;
+}
+
+.more-icon {
+  display: block;
+}
+
+@media (width > 1200px) {
+  .more-icon {
+    display: none;
+  }
+}
+.bottom {
+  gap: 10px;
+}
+.bottom > div {
+  width: 100%;
+  font-size: 15px;
+}
