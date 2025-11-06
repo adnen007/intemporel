@@ -1,40 +1,50 @@
-<div class="image">
-  <img src="images/user.jpg" alt="" />
-  <h6 class="name">Adnen Sol</h6>
-</div>
-<div class="info">
-  <div class="top">
+<div class="order">
+  <div class="image">
+    <img src="images/user.jpg" alt="" />
     <h6 class="name">Adnen Sol</h6>
-    <div [ngClass]="{ show_more: showMore }" class="action">
-      <div class="date">Retrait en magasin</div>
-      <div class="print">Imprimer</div>
-      <div (click)="showUserForm()" class="edit">Modifier</div>
-      <div class="delete">supprimer</div>
-    </div>
-    <div (click)="switchShowMore()" class="more-icon">
-      <mat-icon class="search-icon" fontIcon="more_vert"></mat-icon>
-    </div>
   </div>
-  <div class="bottom">
-    <div class="email">
-      <h5>Date création</h5>
-      <p>14/05/2022 à 14:23</p>
+  <div class="info">
+    <div class="top">
+      <h6 class="name">Adnen Sol</h6>
+      <div [ngClass]="{ show_more: showMore }" class="action">
+        <div class="date">Retrait en magasin</div>
+        <div class="print">Imprimer</div>
+        <div (click)="showUserForm()" class="edit">Modifier</div>
+        <div class="delete">supprimer</div>
+        <div
+          routerLink="/admin/products-list"
+          [state]="{ source: 'orders-list' }"
+          class="see_products"
+        >
+          Voir les articles
+        </div>
+      </div>
+      <div (click)="switchShowMore()" class="more-icon">
+        <mat-icon class="search-icon" fontIcon="more_vert"></mat-icon>
+      </div>
     </div>
-    <!-- <div class="order">
-      <h5>Commande</h5>
-      <p>Expédiée</p>
-    </div> -->
-    <div class="payment">
-      <h5>Paiement</h5>
-      <p>payé</p>
-    </div>
-    <div class="Ref">
-      <h5>Référence</h5>
-      <p>ASDFASDF</p>
-    </div>
-    <div class="price">
-      <h5>Prix</h5>
-      <p>120 DT</p>
+    <div class="bottom">
+      <div>
+        <h5>Date création</h5>
+        <p>14/05/2022 à 14:23</p>
+      </div>
+
+      <div class="">
+        <h5>Commande</h5>
+        <p>Expédiée</p>
+      </div>
+      <div class="payment">
+        <h5>Paiement</h5>
+        <p>payé</p>
+      </div>
+      <div class="Ref">
+        <h5>Référence</h5>
+        <p>ASDFASDF</p>
+      </div>
+      <div class="price">
+        <h5>Prix</h5>
+        <p>120 DT</p>
+      </div>
     </div>
   </div>
 </div>

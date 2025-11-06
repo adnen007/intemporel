@@ -1,1 +1,14 @@
-<p>conditions works!</p>
+<app-dresssing-toolbar
+  [formConfig]="{
+    counter: 'Etat',
+    add_button: 'Ajoute un etat',
+    placeholder: 'Recherche etat...',
+    type: 'state',
+    name: 'Etat'
+  }"
+></app-dresssing-toolbar>
+<div class="list">
+  <app-condition></app-condition>
+  <app-condition></app-condition>
+  <app-condition></app-condition>
+</div>

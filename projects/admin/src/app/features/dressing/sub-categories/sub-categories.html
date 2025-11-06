@@ -1,1 +1,15 @@
-<p>sub-categories works!</p>
+<app-dresssing-toolbar
+  [formConfig]="{
+    counter: 'categories',
+    add_button: 'Ajoute une sous categorie',
+    placeholder: 'Recherche sous categorie...',
+    type: 'sub-category',
+    name: 'sous categorie'
+  }"
+></app-dresssing-toolbar>
+<app-mode-filter></app-mode-filter>
+<div class="list">
+  <app-sub-category></app-sub-category>
+  <app-sub-category></app-sub-category>
+  <app-sub-category></app-sub-category>
+</div>

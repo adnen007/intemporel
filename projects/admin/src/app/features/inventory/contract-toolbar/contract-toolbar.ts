@@ -9,14 +9,4 @@ import { RouterLink } from '@angular/router';
   templateUrl: './contract-toolbar.html',
   styleUrl: './contract-toolbar.css',
 })
-export class ContractToolbar {
-  isUserFormVisible = false;
-
-  showUserForm() {
-    this.isUserFormVisible = true;
-  }
-
-  hideUserForm() {
-    this.isUserFormVisible = false;
-  }
-}
+export class ContractToolbar {}

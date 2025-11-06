@@ -1,4 +1,7 @@
 :host {
+}
+
+.order {
   margin-top: 30px;
   display: flex;
   gap: 30px;
@@ -103,7 +106,7 @@
     display: flex;
   }
 }
-
+.action .see_products,
 .action .date,
 .action .delete,
 .action .edit,
@@ -118,6 +121,7 @@
   color: rgb(57, 55, 56);
 }
 
+.action .see_products,
 .action .delete,
 .action .edit {
   background: rgb(253, 236, 239);
@@ -130,7 +134,9 @@
 .action .date {
   background: rgb(241, 242, 192);
 }
-
+.action .see_products {
+  background-color: #f2c2c2;
+}
 .more-icon {
   display: block;
 }

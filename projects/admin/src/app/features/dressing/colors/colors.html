@@ -1,1 +1,14 @@
-<p>colors works!</p>
+<app-dresssing-toolbar
+  [formConfig]="{
+    counter: 'colours',
+    add_button: 'Ajoute un colour',
+    placeholder: 'Recherche color...',
+    type: 'colors',
+    name: 'colours'
+  }"
+></app-dresssing-toolbar>
+<div class="list">
+  <app-color></app-color>
+  <app-color></app-color>
+  <app-color></app-color>
+</div>

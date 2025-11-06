@@ -1,0 +1,18 @@
+<div class="image"></div>
+<div class="info">
+  <div class="top">
+    <h5>bleu</h5>
+    <div [ngClass]="{ show_more: showMore }" class="action">
+      <div (click)="switchEdit()" class="edit">Modifier</div>
+      <div class="delete">supprimer</div>
+    </div>
+    <div (click)="switchShowMore()" class="more-icon">
+      <mat-icon class="search-icon" fontIcon="more_vert"></mat-icon>
+    </div>
+  </div>
+  <div class="bottom"></div>
+</div>
+
+<ng-container *ngIf="edit">
+  <app-dressing-form type="colors" name="Colours" (close)="switchEdit()"></app-dressing-form>
+</ng-container>

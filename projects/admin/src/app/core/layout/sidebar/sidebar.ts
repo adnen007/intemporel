@@ -70,7 +70,7 @@ export class Sidebar {
       expanded: false,
       submenu: [
         { label: 'Sliders', link: '/admin/appearance/sliders' },
-        { label: 'Bannières', link: '/admin/appearance/banner' },
+        { label: 'Bannières', link: '/admin/appearance/banners' },
       ],
     },
     {

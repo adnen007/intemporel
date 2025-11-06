@@ -4,10 +4,11 @@ import { ProductBox } from '../../../shared/component/product-box/prodcut-box';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { Location } from '@angular/common';
+import { Payment } from '../payment/payment';
 
 @Component({
   selector: 'app-add-order-page',
-  imports: [UserBox, CommonModule, ProductBox, MatIconModule],
+  imports: [UserBox, CommonModule, ProductBox, MatIconModule, Payment],
   templateUrl: './add-order-page.html',
   styleUrl: './add-order-page.css',
 })

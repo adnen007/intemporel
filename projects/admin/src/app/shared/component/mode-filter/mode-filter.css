@@ -1,0 +1,31 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+:host > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  line-height: 1px;
+  background: rgb(250 250 250);
+  border-radius: 3px;
+  color: rgb(0 0 0);
+  font-size: 12px;
+  padding: 14px;
+  height: 0px;
+  font-weight: 500;
+  border: 1px solid #dbdbdb;
+}
+
+img {
+  width: 20px;
+  display: block;
+}

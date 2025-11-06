@@ -1,0 +1,30 @@
+<div class="image">
+  <img src="images/user.jpg" alt="" />
+</div>
+<div class="info">
+  <div class="top">
+    <h5>vue de gouche</h5>
+    <div [ngClass]="{ show_more: showMore }" class="action">
+      <div (click)="switchEdit()" class="edit">Modifier</div>
+      <div class="delete">supprimer</div>
+    </div>
+    <div (click)="switchShowMore()" class="more-icon">
+      <mat-icon class="search-icon" fontIcon="more_vert"></mat-icon>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="mode">
+      <div class="image">
+        <img src="images/vetment.svg" alt="" />
+      </div>
+      <div>
+        <h6>sous categorie</h6>
+        <p>robe</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="edit">
+  <app-dressing-form type="image-ex" name="image" (close)="switchEdit()"></app-dressing-form>
+</ng-container>

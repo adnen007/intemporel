@@ -1,0 +1,26 @@
+<div class="add_item">
+  <div class="wrapper">
+    <div class="type">Mode</div>
+    <form>
+      <div class="photo">
+        <h5>Photo</h5>
+        <label for="upload-image">
+          <img src="images/upload_photo.png" alt="Upload" />
+        </label>
+        <input class="upload_image" id="upload-image" type="file" />
+      </div>
+      <label for="title">Titre*</label>
+      <input id="title" type="text" placeholder="Entrer votre titre" />
+
+      <label for="description">Description*</label>
+      <input id="description" type="text" placeholder="Entrer votre description" />
+
+      <label for="link">lien*</label>
+      <input id="link" type="text" placeholder="Entrer votre lien" />
+      <div class="buttons">
+        <button>Enregistrer</button>
+        <button type="button" (click)="onCloseClick()">Fermer</button>
+      </div>
+    </form>
+  </div>
+</div>

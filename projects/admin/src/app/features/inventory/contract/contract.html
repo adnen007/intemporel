@@ -9,6 +9,13 @@
       <div class="print">Imprimer</div>
       <div class="edit">Modifier</div>
       <div class="delete">supprimer</div>
+      <div
+        routerLink="/admin/products-list"
+        [state]="{ source: 'orders-list' }"
+        class="see_products"
+      >
+        Voir les articles
+      </div>
     </div>
     <div (click)="switchShowMore()" class="more-icon">
       <mat-icon class="search-icon" fontIcon="more_vert"></mat-icon>
@@ -17,12 +24,12 @@
   <div class="bottom">
     <div>
       <h5>Date création</h5>
-      <p>14/05/2022 à 14:23</p>
+      <p class="date">14/05/2022 à 14:23</p>
     </div>
 
     <div>
-      <h5>date de fin de contrat</h5>
-      <p>14/05/2022 à 14:23</p>
+      <h5>fin de contrat</h5>
+      <p class="date">14/05/2022 à 14:23</p>
     </div>
 
     <div>
@@ -30,8 +37,16 @@
       <p>ASDFASDF</p>
     </div>
     <div>
-      <h5>Prix</h5>
-      <p>120 DT</p>
+      <h5>Prix fournisseur</h5>
+      <p>34.3 DT</p>
+    </div>
+    <div>
+      <h5>Prix vente ht</h5>
+      <p>49 DT</p>
+    </div>
+    <div>
+      <h5>Total ttc</h5>
+      <p>49d</p>
     </div>
   </div>
 </div>

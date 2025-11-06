@@ -1,0 +1,30 @@
+<div class="image">
+  <img src="images/banner1.jpg" alt="" />
+</div>
+<div class="info">
+  <div class="top">
+    <div [ngClass]="{ show_more: showMore }" class="action">
+      <div (click)="switchEdit()" class="edit">Modifier</div>
+      <div (click)="siwtchShowImage()" class="veiw">voir</div>
+    </div>
+    <div (click)="switchShowMore()" class="more-icon">
+      <mat-icon class="search-icon" fontIcon="more_vert"></mat-icon>
+    </div>
+  </div>
+  <div class="bottom">
+    <h5>1</h5>
+  </div>
+</div>
+
+<div *ngIf="showImage" class="full_image">
+  <div class="image">
+    <div class="close" (click)="siwtchShowImage()">
+      <mat-icon fontIcon="close" class="close-icon"></mat-icon>
+    </div>
+    <img src="images/banner1.jpg" alt="" />
+  </div>
+</div>
+
+<ng-container *ngIf="edit">
+  <add-slide-banner (close)="switchEdit()"></add-slide-banner>
+</ng-container>

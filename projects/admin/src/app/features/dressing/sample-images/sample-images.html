@@ -1,1 +1,14 @@
-<p>sample-images works!</p>
+<app-dresssing-toolbar
+  [formConfig]="{
+    counter: 'images',
+    add_button: 'Ajoute une image',
+    placeholder: 'Recherche image...',
+    type: 'image-ex',
+    name: 'Image'
+  }"
+></app-dresssing-toolbar>
+<div class="list">
+  <app-sample-image></app-sample-image>
+  <app-sample-image></app-sample-image>
+  <app-sample-image></app-sample-image>
+</div>

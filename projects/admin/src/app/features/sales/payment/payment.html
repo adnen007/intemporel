@@ -1,0 +1,71 @@
+<ul>
+  <li (click)="addMethod('Espèces')">
+    <div class="icon">
+      <mat-icon class="money-icon" fontIcon="attach_money"></mat-icon>
+    </div>
+    <h6>Espèces</h6>
+  </li>
+  <li (click)="addMethod('TPE')">
+    <div class="icon">
+      <mat-icon class="money-icon" fontIcon="attach_money"></mat-icon>
+    </div>
+    <h6>TPE</h6>
+  </li>
+  <li (click)="addMethod('Crédit à recevoir')">
+    <div class="icon">
+      <mat-icon class="money-icon" fontIcon="attach_money"></mat-icon>
+    </div>
+    <h6>Crédit à recevoir</h6>
+  </li>
+  <li (click)="addMethod('Chéque à recevoir')">
+    <div class="icon">
+      <mat-icon class="money-icon" fontIcon="attach_money"></mat-icon>
+    </div>
+    <h6>Chéque à recevoir</h6>
+  </li>
+  <li (click)="addMethod('Banque')">
+    <div class="icon">
+      <mat-icon class="money-icon" fontIcon="attach_money"></mat-icon>
+    </div>
+    <h6>Banque</h6>
+  </li>
+</ul>
+
+<div class="method-list">
+  <span class="head">Méthode</span>
+  <span class="head"> Donné</span>
+  <span class="head">Date </span>
+  <span class="head"></span>
+
+  <ng-container *ngFor="let method of paymentMethods">
+    <span class="method"> {{ method.method }} </span>
+    <span class="method"> {{ method.currentAmount }} </span>
+    <span class="method date"> {{ method.date }} </span>
+    <span (click)="cancelMethod(method.methodId)" class="method">
+      <mat-icon class="" fontIcon="cancel"></mat-icon>
+    </span>
+  </ng-container>
+  <span>Dûe:0.000</span>
+  <span> Total:0.000</span>
+</div>
+
+<div class="calc">
+  <span>1</span>
+  <span>2</span>
+  <span>3</span>
+  <span>+10</span>
+  <span>4</span>
+  <span>5</span>
+  <span>6</span>
+  <span>+20</span>
+  <span>7</span>
+  <span>8</span>
+  <span>9</span>
+  <span>+50</span>
+  <span>C</span>
+  <span>0</span>
+  <span>.</span>
+  <span>
+    <mat-icon class="" fontIcon="backspace"></mat-icon>
+  </span>
+</div>

@@ -1,1 +1,14 @@
-<p>modes works!</p>
+<app-dresssing-toolbar
+  [formConfig]="{
+    counter: 'modes',
+    add_button: 'Ajoute un mode',
+    placeholder: 'Recherche mode...',
+    type: 'mode',
+    name: 'mode'
+  }"
+></app-dresssing-toolbar>
+<div class="list">
+  <app-mode></app-mode>
+  <app-mode></app-mode>
+  <app-mode></app-mode>
+</div>

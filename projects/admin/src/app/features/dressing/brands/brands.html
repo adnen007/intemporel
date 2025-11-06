@@ -1,1 +1,14 @@
-<p>brands works!</p>
+<app-dresssing-toolbar
+  [formConfig]="{
+    counter: 'marques',
+    add_button: 'Ajoute une marque',
+    placeholder: 'Recherche marque...',
+    type: 'brand',
+    name: 'Marque'
+  }"
+></app-dresssing-toolbar>
+<div class="list">
+  <app-brand></app-brand>
+  <app-brand></app-brand>
+  <app-brand></app-brand>
+</div>

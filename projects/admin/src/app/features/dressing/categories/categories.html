@@ -1,1 +1,15 @@
-<p>categories works!</p>
+<app-dresssing-toolbar
+  [formConfig]="{
+    counter: 'categories',
+    add_button: 'Ajoute une categorie',
+    placeholder: 'Recherche categorie...',
+    type: 'category',
+    name: 'categorie'
+  }"
+></app-dresssing-toolbar>
+<app-mode-filter></app-mode-filter>
+<div class="list">
+  <app-category></app-category>
+  <app-category></app-category>
+  <app-category></app-category>
+</div>

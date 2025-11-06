@@ -1,0 +1,59 @@
+<div class="add_item">
+  <div class="wrapper">
+    <div class="type">{{ name }}</div>
+    <form>
+      <div class="photo">
+        <h5>Photo</h5>
+        <label for="upload-image">
+          <img src="images/upload_photo.png" alt="Upload" />
+        </label>
+        <input class="upload_image" id="upload-image" type="file" />
+      </div>
+
+      <ng-container *ngIf="type === 'category' || type == 'sub-category' || type === 'image-ex'">
+        <label for="mode">Modes*</label>
+        <select id="mode">
+          <option value="">Choisi un mode</option>
+          <option value="">Mode homme</option>
+          <option value="">Mode femme</option>
+        </select>
+      </ng-container>
+
+      <ng-container *ngIf="type == 'sub-category' || type === 'image-ex'">
+        <label for="category">Categories*</label>
+        <select id="category">
+          <option value="">Choisi une categorie</option>
+        </select>
+      </ng-container>
+      <ng-container *ngIf="type === 'image-ex'">
+        <label for="sub-category">Sous Categories*</label>
+        <select id="sub-category">
+          <option value="">Choisi une sous categorie</option>
+        </select>
+      </ng-container>
+      <ng-container *ngIf="type === 'image-ex'">
+        <label for="sub-category">Sous Categories*</label>
+        <select id="sub-category">
+          <option value="">Choisi une sous categorie</option>
+        </select>
+      </ng-container>
+      <ng-container *ngIf="type == 'image-ex'">
+        <label for="vue">Vue</label>
+        <select id="vue">
+          <option value="">Choisi une vue</option>
+        </select>
+      </ng-container>
+      <label for="title">Titre*</label>
+      <input id="title" type="text" placeholder="Entrer votre titre" />
+      <ng-container *ngIf="type == 'colors'">
+        <label for="colors">Code couleur</label>
+        <input id="colors" type="color" />
+      </ng-container>
+
+      <div class="buttons">
+        <button>Enregistrer</button>
+        <button type="button" (click)="onCloseClick()">Fermer</button>
+      </div>
+    </form>
+  </div>
+</div>

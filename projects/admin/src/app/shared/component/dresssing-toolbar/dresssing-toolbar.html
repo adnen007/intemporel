@@ -1,0 +1,25 @@
+<div class="search">
+  <input type="text" [placeholder]="formConfig.placeholder" />
+  <div class="icon">
+    <mat-icon class="search-icon" fontIcon="search"></mat-icon>
+  </div>
+</div>
+
+<div class="actions">
+  <div class="counter">
+    <mat-icon class="icon" fontIcon="business_center"></mat-icon>
+    24 {{ formConfig.counter }}
+  </div>
+  <div (click)="showForm()" class="add">
+    <mat-icon class="icon" fontIcon="person_add"></mat-icon>
+    {{ formConfig.add_button }}
+  </div>
+</div>
+
+<ng-container *ngIf="isFormVisible">
+  <app-dressing-form
+    [name]="formConfig.name"
+    [type]="formConfig.type"
+    (close)="hideForm()"
+  ></app-dressing-form>
+</ng-container>

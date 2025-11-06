@@ -5,10 +5,9 @@ import { Chart } from './chart/chart';
 import { ContractChart } from './contract-chart/contract-chart';
 import { AddOrder } from './add-order/add-order';
 import { AddContract } from './add-contract/add-contract';
-import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
-  imports: [DashboardNav, CommonModule, Chart, AddOrder, ContractChart, AddContract, RouterLink],
+  imports: [DashboardNav, CommonModule, Chart, AddOrder, ContractChart, AddContract],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })

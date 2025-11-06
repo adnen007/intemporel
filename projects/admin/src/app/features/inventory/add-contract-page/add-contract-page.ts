@@ -4,10 +4,11 @@ import { ProductBox } from '../../../shared/component/product-box/prodcut-box';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { Location } from '@angular/common';
+import { ContractDetail } from '../contract-detail/contract-detail';
 
 @Component({
   selector: 'add-contract-page',
-  imports: [UserBox, CommonModule, ProductBox, MatIconModule],
+  imports: [UserBox, CommonModule, ProductBox, MatIconModule, ContractDetail],
   templateUrl: './add-contract-page.html',
   styleUrl: './add-contract-page.css',
 })

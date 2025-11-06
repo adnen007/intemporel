@@ -1,1 +1,14 @@
-<p>sizes works!</p>
+<app-dresssing-toolbar
+  [formConfig]="{
+    counter: 'tailles',
+    add_button: 'Ajoute un taille',
+    placeholder: 'Recherche taille...',
+    type: 'size',
+    name: 'Taille'
+  }"
+></app-dresssing-toolbar>
+<div class="list">
+  <app-size></app-size>
+  <app-size></app-size>
+  <app-size></app-size>
+</div>

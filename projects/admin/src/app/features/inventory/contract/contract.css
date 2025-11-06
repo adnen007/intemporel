@@ -106,6 +106,7 @@
 
 .action .delete,
 .action .edit,
+.action .see_products,
 .action .print {
   display: flex;
   justify-content: center;
@@ -118,10 +119,14 @@
 }
 
 .action .delete,
+.action .see_products,
 .action .edit {
   background: rgb(253, 236, 239);
   user-select: none;
   cursor: pointer;
+}
+.action .see_products {
+  background-color: #f2c2c2;
 }
 .action .print {
   background-color: #d2c2f2;

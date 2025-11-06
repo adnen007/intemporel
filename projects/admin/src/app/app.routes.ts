@@ -21,11 +21,10 @@ import { JoinRequests } from './features/users/join-requests/join-requests';
 
 // Inventory feature imports
 import { Contracts } from './features/inventory/contracts/contracts';
-import { Products } from './features/inventory/products/products';
 
 // Appearance feature imports
-import { Sliders } from './features/appearance/sliders/sliders';
-import { Banner } from './features/appearance/banner/banner';
+import { Slides } from './features/appearance/slides/slides';
+import { Banners } from './features/appearance/banners/banners';
 
 // Sales feature imports
 import { Sales } from './features/sales/sales';
@@ -34,6 +33,9 @@ import { AddOrderPage } from './features/sales/add-order-page/add-order-page';
 // Messages feature imports
 import { Messages } from './features/messages/messages';
 import { AddContractPage } from './features/inventory/add-contract-page/add-contract-page';
+
+import { ProductsList } from './shared/shared-pages/products-list/products-list';
+import { ProductDetail } from './shared/shared-pages/product-detail/product-detail';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'admin', pathMatch: 'full' },
@@ -68,7 +70,7 @@ export const routes: Routes = [
           { path: 'add-contract', component: AddContractPage },
         ],
       },
-      { path: 'products', component: Products },
+      { path: 'products', component: ProductsList },
     ],
   },
   {
@@ -88,8 +90,8 @@ export const routes: Routes = [
   {
     path: 'admin/appearance',
     children: [
-      { path: 'sliders', component: Sliders },
-      { path: 'banner', component: Banner },
+      { path: 'sliders', component: Slides },
+      { path: 'banners', component: Banners },
     ],
   },
 
@@ -97,6 +99,7 @@ export const routes: Routes = [
     path: 'admin/messages',
     component: Messages,
   },
-
+  { path: 'admin/products-list', component: ProductsList },
+  { path: 'admin/products-list/product-detail', component: ProductDetail },
   { path: '**', redirectTo: 'admin' },
 ];

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { DresssingToolbar } from '../../../shared/component/dresssing-toolbar/dresssing-toolbar';
+import { Mode } from './mode/mode';
 
 @Component({
   selector: 'app-modes',
-  imports: [],
+  imports: [DresssingToolbar, Mode],
   templateUrl: './modes.html',
-  styleUrl: './modes.css'
+  styleUrl: './modes.css',
 })
-export class Modes {
-
-}
+export class Modes {}
