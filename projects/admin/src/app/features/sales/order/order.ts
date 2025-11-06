@@ -13,15 +13,6 @@ export class Order {
   showMore: boolean = false;
   isActive: boolean = false;
   isSale: boolean = false;
-  isUserFormVisible = false;
-
-  showUserForm() {
-    this.isUserFormVisible = true;
-  }
-
-  hideUserForm() {
-    this.isUserFormVisible = false;
-  }
 
   switchSale() {
     this.isSale = !this.isSale;

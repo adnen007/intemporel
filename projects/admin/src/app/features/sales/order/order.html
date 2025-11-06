@@ -9,7 +9,7 @@
       <div [ngClass]="{ show_more: showMore }" class="action">
         <div class="date">Retrait en magasin</div>
         <div class="print">Imprimer</div>
-        <div (click)="showUserForm()" class="edit">Modifier</div>
+        <div routerLink="/admin/sales/add-order" class="edit">Modifier</div>
         <div class="delete">supprimer</div>
         <div
           routerLink="/admin/products-list"
