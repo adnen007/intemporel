@@ -10,7 +10,11 @@
     <mat-icon class="icon" fontIcon="business_center"></mat-icon>
     24 articles
   </div>
-  <div *ngIf="source !== 'orders-list'" class="add_contract">
+  <div
+    routerLink="/admin/inventory/products/add-product"
+    *ngIf="source !== 'orders-list'"
+    class="add_contract"
+  >
     <mat-icon class="icon" fontIcon="person_add"></mat-icon>
     Ajoute un article
   </div>

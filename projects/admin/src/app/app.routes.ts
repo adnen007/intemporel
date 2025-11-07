@@ -36,6 +36,7 @@ import { AddContractPage } from './features/inventory/add-contract-page/add-cont
 
 import { ProductsList } from './shared/shared-pages/products-list/products-list';
 import { ProductDetail } from './shared/shared-pages/product-detail/product-detail';
+import { AddProduct } from './shared/shared-pages/add-product/add-product';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'admin', pathMatch: 'full' },
@@ -70,7 +71,14 @@ export const routes: Routes = [
           { path: 'add-contract', component: AddContractPage },
         ],
       },
-      { path: 'products', component: ProductsList },
+      {
+        path: 'products',
+
+        children: [
+          { path: '', component: ProductsList },
+          { path: 'add-product', component: AddProduct },
+        ],
+      },
     ],
   },
   {
