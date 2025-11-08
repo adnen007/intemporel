@@ -19,6 +19,11 @@
   gap: 30px;
   height: 75px;
 }
+@media (width >= 1200px) {
+  .container {
+    padding: 0 100px;
+  }
+}
 .sidebar {
   display: flex;
   align-items: center;

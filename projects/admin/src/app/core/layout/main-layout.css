@@ -2,3 +2,10 @@
   margin-top: 75px;
   display: flex;
 }
+
+@media (width >= 992px) {
+  .content {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}

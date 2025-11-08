@@ -125,7 +125,7 @@ ul {
 } */
 @media (width >= 1200px) {
   .container {
-    width: 1190px;
+    /* width: 1190px; */
   }
 }
 /* Chrome, Edge, Safari */
