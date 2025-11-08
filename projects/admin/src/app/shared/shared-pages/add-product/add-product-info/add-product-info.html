@@ -1,0 +1,40 @@
+<div class="modes-list">
+  <div class="search">
+    <input placeholder="Recherche mode" type="text" />
+  </div>
+  <div class="list">
+    <div *ngFor="let mode of modes" class="mode">
+      <div class="image">
+        <img src="images/modes/femme.png" alt="" />
+      </div>
+      <h6>Mode Femme</h6>
+    </div>
+  </div>
+</div>
+
+<div class="category-list">
+  <div class="search">
+    <input placeholder="Recherche categorie" type="text" />
+  </div>
+  <div class="list">
+    <div *ngFor="let category of categories" class="category">
+      <div class="image">
+        <img src="images/vetment.svg" alt="" />
+      </div>
+      <h6>vetements</h6>
+    </div>
+  </div>
+</div>
+<div class="sub-category-list">
+  <div class="search">
+    <input placeholder="Recherche sous categorie" type="text" />
+  </div>
+  <div class="list">
+    <div *ngFor="let subCategory of subCategories" class="sub-category">
+      <div class="image">
+        <img src="images/user.jpg" alt="" />
+      </div>
+      <h6>Robe</h6>
+    </div>
+  </div>
+</div>

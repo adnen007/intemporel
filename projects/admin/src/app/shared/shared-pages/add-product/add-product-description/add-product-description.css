@@ -1,0 +1,64 @@
+:host {
+  grid-column: 2 / span 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (width <= 1200px) {
+  :host {
+    display: contents;
+  }
+}
+
+.rate-list {
+  height: 700px;
+  overflow-y: auto;
+}
+
+.rate {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  line-height: 1;
+
+  background: #ffffff;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 7px rgb(0 0 0 / 7%);
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  padding: 15px;
+}
+.rate .image {
+  width: 180px;
+}
+.rate img {
+  width: 100%;
+}
+
+.rate h6 {
+  font-size: 20px;
+}
+.description {
+  padding: 20px;
+}
+label {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  color: var(--iq-dark);
+  display: block;
+}
+
+textarea {
+  height: 100px;
+  font-weight: 100;
+  letter-spacing: 0.6px;
+  line-height: 45px;
+  background: transparent;
+  border: 1px solid #d7dbda;
+  font-size: 14px;
+  padding-left: 10px;
+  width: 100%;
+}

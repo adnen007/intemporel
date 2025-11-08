@@ -1,0 +1,38 @@
+<div class="size-list">
+  <div class="search">
+    <input placeholder="Recherche taille..." type="text" />
+  </div>
+  <div class="list">
+    <div *ngFor="let size of sizes" class="size">
+      <div class="image">
+        <img src="images/size.png" alt="" />
+      </div>
+      <h6>35</h6>
+    </div>
+  </div>
+</div>
+
+<div class="color-list">
+  <div class="search">
+    <input placeholder="Recherche couluer" type="text" />
+  </div>
+  <div class="list">
+    <div *ngFor="let color of colors" class="color">
+      <div class="image"></div>
+      <h6>blue</h6>
+    </div>
+  </div>
+</div>
+<div class="brand-list">
+  <div class="search">
+    <input placeholder="Recherche marque..." type="text" />
+  </div>
+  <div class="list">
+    <div *ngFor="let brand of brands" class="brand">
+      <div class="image">
+        <img src="images/brand.jpg" alt="" />
+      </div>
+      <h6>Chanel</h6>
+    </div>
+  </div>
+</div>

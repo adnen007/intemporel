@@ -37,7 +37,11 @@ import { AddContractPage } from './features/inventory/add-contract-page/add-cont
 import { ProductsList } from './shared/shared-pages/products-list/products-list';
 import { ProductDetail } from './shared/shared-pages/product-detail/product-detail';
 import { AddProduct } from './shared/shared-pages/add-product/add-product';
-
+import { AddProductPhotos } from './shared/shared-pages/add-product/add-product-photos/add-product-photos';
+import { AddProductInfo } from './shared/shared-pages/add-product/add-product-info/add-product-info';
+import { AddProductFeatures } from './shared/shared-pages/add-product/add-product-features/add-product-features';
+import { AddProductPrice } from './shared/shared-pages/add-product/add-product-price/add-product-price';
+import { AddProductDescription } from './shared/shared-pages/add-product/add-product-description/add-product-description';
 export const routes: Routes = [
   { path: '', redirectTo: 'admin', pathMatch: 'full' },
 
@@ -76,7 +80,17 @@ export const routes: Routes = [
 
         children: [
           { path: '', component: ProductsList },
-          { path: 'add-product', component: AddProduct },
+          {
+            path: 'add-product',
+            component: AddProduct,
+            children: [
+              { path: '', component: AddProductInfo },
+              { path: 'photos', component: AddProductPhotos },
+              { path: 'features', component: AddProductFeatures },
+              { path: 'description', component: AddProductDescription },
+              { path: 'price', component: AddProductPrice },
+            ],
+          },
         ],
       },
     ],
