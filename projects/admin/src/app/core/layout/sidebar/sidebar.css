@@ -6,6 +6,15 @@
   flex-shrink: 0;
   background-color: #fafafa;
 }
+:host {
+  overflow: auto; /* allow scrolling */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+:host::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 
 @media (width <= 768px) {
   :host {

@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { ProductBox } from '../../../shared/component/product-box/prodcut-box';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-product',
-  imports: [CommonModule, ProductBox, MatIconModule],
+  imports: [CommonModule, MatIconModule],
   templateUrl: './add-product.html',
   styleUrl: './add-product.css',
 })
