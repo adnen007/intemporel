@@ -1,6 +1,7 @@
 :host {
   padding: 20px;
   flex: 1;
+  padding-top: 10px;
 }
 
 .list {
@@ -16,6 +17,6 @@
 
 @media (width >= 1200px) {
   .list {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
   }
 }

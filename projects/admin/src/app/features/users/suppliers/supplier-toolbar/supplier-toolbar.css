@@ -91,6 +91,7 @@
   letter-spacing: 1px;
   user-select: none;
   cursor: pointer;
+  white-space: nowrap;
 }
 .actions .user_number {
   background: rgb(250 250 250);
