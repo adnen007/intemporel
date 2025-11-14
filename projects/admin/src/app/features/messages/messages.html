@@ -1,1 +1,99 @@
-<p>messages works!</p>
+<div class="messaging-container" [class.show-chat]="showChat">
+  <!-- Mobile Back Button -->
+  <button class="mobile-back-btn" (click)="closeChat()">
+    <mat-icon fontIcon="arrow_back"></mat-icon>
+  </button>
+
+  <!-- Left Sidebar - Contacts List -->
+  <div class="contacts-sidebar">
+    <div class="contacts-header">
+      <div class="header-content">
+        <div class="profile-image">
+          <img src="images/user.jpg" alt="Admin" />
+        </div>
+        <div class="header-text">
+          <h5>Messagerie Intemporel</h5>
+          <p>Un service clientèle 24h/7j</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contacts-search">
+      <input type="text" placeholder="Recherche client..." />
+      <mat-icon class="search-icon" fontIcon="search"></mat-icon>
+    </div>
+
+    <div class="contacts-list">
+      <div
+        *ngFor="let contact of contacts; let i = index"
+        class="contact-item"
+        [class.active]="selectedContactIndex === i"
+        (click)="selectContact(i)"
+      >
+        <div class="contact-avatar">
+          <img [src]="contact.avatar" [alt]="contact.name" />
+          <span *ngIf="contact.isOnline" class="online-indicator"></span>
+        </div>
+        <div class="contact-info">
+          <h6 class="contact-name">{{ contact.name }}</h6>
+          <p class="contact-last-message">{{ contact.lastMessage }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Side - Chat Window -->
+  <div class="chat-window">
+    <div class="chat-messages" #messagesContainer>
+      <div
+        *ngFor="let message of conversations[selectedContactIndex] || []"
+        class="message-bubble"
+        [class.sent]="message.sent"
+        [class.received]="!message.sent"
+      >
+        <div class="message-avatar">
+          <img
+            [src]="
+              message.sent
+                ? 'images/user.jpg'
+                : message.senderAvatar ||
+                  contacts[selectedContactIndex]?.avatar ||
+                  'images/user.jpg'
+            "
+            [alt]="
+              message.sent
+                ? 'Admin'
+                : message.senderName || contacts[selectedContactIndex]?.name || 'Contact'
+            "
+          />
+        </div>
+        <div class="message-content">
+          <div class="message-text">{{ message.text }}</div>
+          <div class="message-time">{{ message.time }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input-container">
+      <div class="chat-input-actions">
+        <button class="action-btn" type="button">
+          <mat-icon fontIcon="attach_file"></mat-icon>
+        </button>
+        <button class="action-btn" type="button">
+          <span class="format-icon">Aa</span>
+        </button>
+      </div>
+      <input
+        type="text"
+        class="chat-input"
+        placeholder=""
+        [(ngModel)]="newMessage"
+        (keyup.enter)="sendMessage()"
+      />
+      <button class="send-btn" (click)="sendMessage()" type="button">
+        <span>Envoyer</span>
+        <mat-icon fontIcon="send"></mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
